@@ -23,7 +23,8 @@ putchar('0' + z);
 
 if (x != 7 || y != 8 || z != 9)
 {
-putchar(',')
+putchar(',');
+
 putchar(' ');
 }
 }
