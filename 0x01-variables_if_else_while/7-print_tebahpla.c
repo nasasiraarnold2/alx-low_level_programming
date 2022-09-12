@@ -1,18 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include <ctype.h>
 /**
- *  * main - entry point
- *   * Description: prints lowercase alphabet in reverse
- *    * Return: 0
+ *  * main - Program to print alphabet letters in reverse followed by new line
+ *   *
+ *    * Return: return 0
  */
 int main(void)
 {
 int c;
+
 for (c = 'z'; c >= 'a'; c--)
 {
 putchar(c);
 }
-putchar('\n')
+putchar('\n');
 return (0);
 }
