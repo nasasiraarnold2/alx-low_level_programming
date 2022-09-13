@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  *  * main - entry point
  *   * Description: program that prints _putchar
@@ -16,5 +15,6 @@ _putchar('h');
 _putchar('a');
 _putchar('r');
 _putchar('\n');
+
 return (0);
 }
