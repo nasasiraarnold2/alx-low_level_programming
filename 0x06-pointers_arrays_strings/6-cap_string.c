@@ -1,30 +1,43 @@
 #include "main.h"
-
 /**
- *  * cap_string - capitalizes all words in a string
- *   * @s: string to capitalize
+ *  * cap_string - capitalizes all words of a string
+ *   * @n: input value
  *    *
- *     * Return: address of s
+ *     *
+ *      * Return:string
  */
-char *cap_string(char *s)
+char *cap_string(char *n)
 {
-int i = 0, j;
-char a[] = " \t\n,;.!?\"(){}";
-while (*(s + i))
-{
-if (*(s + i) >= 'a' && *(s + i) <= 'z')
-{
-if (i == 0)
-*(s + i) -= 'a' - 'A';
-else
-{
-{
-if (a[j] == *(s + i - 1))
-*(s + i) -= 'a' - 'A';
+	int i;
+
+	i = 0;
+	if (n[0] >= 'a' && n[0] <= 'z')
+	{
+		n[0] = n[0] - 32;
+	}
+	for (i = 0; n[i] != '\0'; i++)
+	{
+		switch (n[i])
+		{
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+			case ' ':
+			case '\n':
+			case '\t':
+				if (n[i + 1] > 96 && n[i + 1] < 123)
+				{
+					n[i + 1] = n[i + 1] - 32;
+				}
+		}
+	}
+	return (n);
 }
-}
-}
-i++;
-}
-return (s);
-}
+
